@@ -22,7 +22,7 @@ func New(s Service) *Data {
 
 func (d *Data) Status(ctx echo.Context) error {
 	t := d.s.DaysLeft()
-	s := fmt.Sprintf("Numberof days until 01.01.2026: %d", t)
+	s := fmt.Sprintf("Left days until 01.01.2026: %d", t)
 
 	err := ctx.String(http.StatusOK, s)
 	if err != nil {
